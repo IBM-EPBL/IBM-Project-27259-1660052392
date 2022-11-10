@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="{{url_for('static', filename='css/image_5.jpeg')}}" style="width:100%;height:100%;position:absolute;border-radius:0;opacity:0.6">
+        <div id="fom1"> 
+            <p><b>Car Details</b></p>
+            <form id="f1" align="center"> 
+                <select id="slct1" name="slct1" onchange="populate('slct1','slct2')">
+                    <option value="">Brand</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Bmw">BMW</option>
+                    <option value="Datsun">Datsun</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Force">Force</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Mahindra">Mahindra</option>
+                    <option value="Maruti">Maruti</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Skoda">Skoda</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+                <select id="slct2" name="slct2">
+                    <option value="Model">Model</option>
+                </select><br>
+                <input type="text" placeholder="Vehicle_age">
+                <input type="text" placeholder="Km_driven"><br>
+                <input type="text" placeholder="Fuel_type">
+                <input type="text" placeholder="Transmission_type"><br>
+                <input type="text" placeholder="Mileage">
+                <input type="text" placeholder="Engine"><br>
+                <input type="text" placeholder="Max_power">
+                <input type="text" placeholder="Seats"><br>
+                <input type="text" placeholder="Owner_type"><br><br>
+            </form>
+        </div>
+        <button id="name_1" onclick="up()">predict</button>
+        <button id="log_out" >Log out</button>
+        <div id="fom2" class="content animate"><p>Result</p></div>
+        <script>
+            function populate(s1,s2){
+                var ss1=document.getElementById(s1);
+                var ss2=document.getElementById(s2);
+                ss2.innerHTML="";
+                if(ss1.value=="Audi"){
+                    var optionArray=["model|Model","A4|A4","A6|A6"];
+                }
+                else if(ss1.value=="BMW")
+                {
+                    var optionArray=["model|Model","3|3","5|5","x1|X1"];
+                }
+                else if(ss1.value=="Datsun")
+                {
+                    var optionArray=["model|Model","G|GO","RG|redi-GO","rg|RediGO"];
+                }
+                else if(ss1.value=="Ferrari")
+                {
+                    var optionArray=["model|Model","Ferr|GTC4Lusso"];
+                }
+                else if(ss1.value=="Force")
+                {
+                    var optionArray=["model|Model","For|Gurkha"];
+                }
+                else if(ss1.value=="Maruti")
+                {
+                    var optionArray=["model|Model","alt|Alto","bal|Baleno","cel|Celerio","wag|Wagon","swi|swift","cia|ciaz","swidzi|Swift Dzire","igni|Ignis","vit|Vitara","erti|Ertiga","eeco|Eeco","dzirevxi|Dzire VXI","xl6|XL6","spresso|S-Presso","dzirelxi|Dzire LXI","dzirezxi|Dzire ZXI"];
+                }
+                else if(ss1.value=="Hyundai")
+                {
+                    var optionArray=["model|Model","grand|Grand","i2|i20","i10|i10","Venue|Venue","Verna|Verna","creta|Creta","sant|Santro","elant|Elantra","aura|Aura"];
+                }
+                else if(ss1.value=="Ford")
+                {
+                    var optionArray=["model|Model","ecospo|Ecosport","aspire|Aspire","figo|Figo","freestyle|Freestyle"];
+                }
+                else if(ss1.value=="Renault")
+                {
+                    var optionArray=["model|Model","dust|Duster","kwid|KWID","triber|Triber"];
+                }
+                else if(ss1.value=="Mercedes-Benz")
+                {
+                    var optionArray=["model|Model","cclass|C-Class","eclass|E-Class"];
+                }
+                else if(ss1.value=="Volkswagen")
+                {
+                    var optionArray=["model|Model","vento|Vento","polo|Polo"];
+                }
+                else if(ss1.value=="Honda")
+                {
+                    var optionArray=["model|Model","city|City","amaze|Amaze","crv|CR-V","jazz|Jazz","civic|Civic"];
+                }
+                else if(ss1.value=="Mahindra")
+                {
+                    var optionArray=["model|Model","bole|Bolero","kuv100|KUV 100","scor|Scorpio","maraz|Marazzo","kuv|KUV","xuv500|XUV500","xuv300|XUV300"];
+                }
+                else if(ss1.value=="Tata")
+                {
+                    var optionArray=["model|Model","tiago|Tiago","tigor|Tigor","nexon|Nexon","safa|Safari","har|Harrier","altro|Altroz"];
+                }
+                else if(ss1.value=="Kia")
+                {
+                    var optionArray=["model|Model","selt|Seltos"];
+                }
+                else if(ss1.value=="Skoda")
+                {
+                    var optionArray=["model|Model","rap|Rapid","superb|Superb","octa|Octavia"];
+                }
+                else if(ss1.value=="Toyota")
+                {
+                    var optionArray=["model|Model","yar|Yaris","glaz|Glanza","innov|Innova"];
+                }
+                else if(ss1.value=="Nissan")
+                {
+                    var optionArray=["model|Model","kick|Kicks","xtrail|X-Trail"];
+                }
+                else if(ss1.value=="Jeep")
+                {
+                    var optionArray=["model|Model","comp|Compass"];
+                }
+                else if(ss1.value=="Volvo")
+                {
+                    var optionArray=["model|Model","xc60|XC60"];
+                }
+                else if(ss1.value=="Mini")
+                {
+                    var optionArray=["model|Model","coop|Cooper"];
+                }
+                else{
+                    var optionArray=["model|Model","d6|D6","D7|d7","D8|c8"];
+                }
+                for(var option in optionArray){
+                    var pair=optionArray[option].split("|");
+                    var newOption=document.createElement("option");
+                    newOption.value=pair[0];
+                    newOption.innerHTML=pair[1];
+                    ss2.options.add(newOption);
+                }
+            }
+            function up(){
+                var x=document.getElementById("fom2");
+                if(x.style.display=="none"){
+                    x.style.display="block";
+                }
+                else{
+                    x.style.display="none"
+                }
+            }
+        </script>
+    </body>
+</html>

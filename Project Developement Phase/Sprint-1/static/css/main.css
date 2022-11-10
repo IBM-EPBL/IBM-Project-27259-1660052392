@@ -1,0 +1,119 @@
+body,html{ 
+    margin:0;
+    /* overflow: hidden;  */
+}
+#fom1{
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color:rgba(95, 113, 87, 0.4);
+    box-shadow:5px 5px 5px 5px rgba(0,0,0,0.5) ;
+    margin-top: 5%;
+    margin-left: 25%;
+    border-radius: 20px;
+    display: block;
+}
+p{
+    position:absolute;
+    color:whitesmoke;
+    left:40%;
+    top:-3%;
+    font-size: 30px;
+
+}
+#f1{
+    margin-top: 10%;
+    display:block;
+}
+input{
+    border-radius: 20px;
+    outline:none;
+    border:none;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+    background-color: white;
+    text-align: center;
+}
+input[type=text]{
+    padding: 15px;
+    margin:5px;
+    color:rgb(115, 111, 111);
+}
+select, option {
+    width: 197px;
+}
+#slct1{
+    padding:14px 65px;
+    border-radius: 20px;
+    margin:5px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+    color:rgb(115, 111, 111);
+    border:none;
+    outline: none;
+}
+option {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#slct2{
+    padding:14px 65px;
+    border-radius: 20px;
+    margin:5px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+    color:rgb(115, 111, 111);
+    border:none;
+    outline: none;
+}
+#name_1{
+    background-color:rgba(95, 113, 87, 0.9);
+    font-size:15px;
+    position:absolute;
+    margin-left:46%;
+    margin-top:37%;
+    padding: 10px 30px;
+    border:none;
+    border-radius: 20px;
+    color: white;
+}
+#name_1:hover{
+    color:rgba(95, 113, 87, 10);
+}
+.content{
+    position:absolute;
+    width:40%;
+    height:40%;
+    top:40%;
+    left:30%;
+    border-radius: 20px;
+    display:none;
+    background-color: rgba(95, 113, 87, 0.9);
+    color:white;
+}
+#log_out{
+    background-color:rgba(95, 113, 87, 0.9);
+    font-size:12px;
+    position:absolute;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 20px;
+    color: white;
+    right:1%;
+    top:2%;
+}
+#log_out:hover{
+    color:rgba(95, 113, 87, 10);
+}
+.animate { 
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s;
+  }
+  
+ @-webkit-keyframes animatezoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}

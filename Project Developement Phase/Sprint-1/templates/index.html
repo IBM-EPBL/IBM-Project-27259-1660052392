@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    </head>
+    <body>
+        <img src="{{url_for('static', filename='css/image_5.jpeg')}}" style="width:100%;height:100%;position:absolute;border-radius:0;opacity:0.6">
+        <div id="image">
+            <img src="{{url_for('static', filename='css/groot.jpeg')}}" style="opacity:0.9">
+            <button id="name_1" onclick="up()">Sign Up</button>
+            <button id="name_2" onclick="down()">Sign In</button>
+        </div>
+        <div id="sign_up" class="animate">
+            <form id="fom1" align="center" action="/adduser" method="POST">
+                <input type="text" placeholder="Name"  name="name"required id="fom1"><br>
+                <input type="email" placeholder="Email"  name="email"><br>
+                <input id="pwd" type="password" placeholder="Password"  name="password"required><br>
+                <input id="pwd" type="password" placeholder="Retype-Password" name="repassword"required><br>
+                <input type="text" placeholder="Phone" name="mobilenumber"required><br><br>
+                <input value="Sign up" type="submit">
+                <input value="Reset" type="reset">
+            </form>
+        </div>
+        <div id="sign_in" align="center" class="animate">
+            <form action="/login" method="POST">
+                <input type="email" placeholder="Email"name="email" required><br>
+                <input id="pwd" type="password" placeholder="Password"name="password" required><br><br>
+                <label><input type="checkbox">Remember me</label><br><br>
+                <label><input id="submit" value="Sign in" type="submit"></label>
+                <p>-----------------------------------------------------</p>
+                <div id="icon1">
+                    <a href="{{url_for("google")}}" style="text-decoration:none;color:white">
+                        <i class="fab fa-google"></i>
+                        <p id="cwg">continue with google</p>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <script>
+            function up(){
+                document.getElementById("sign_up").style.display="block";
+                document.getElementById("sign_in").style.display="none";
+            }
+            function down(){
+                document.getElementById("sign_in").style.display="block";
+                document.getElementById("sign_up").style.display="none";
+            }
+        </script>
+    </body>
+</html>

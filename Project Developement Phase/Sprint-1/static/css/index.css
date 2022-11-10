@@ -1,0 +1,157 @@
+body,html{
+    margin:0;
+    overflow: hidden;
+}
+#image{
+    width:60%;
+    height:90%;
+    position:absolute;
+    background-color:rgba(95, 113, 87, 0.3);
+    box-shadow:5px 5px 5px 5px rgba(0,0,0,0.5) ;
+    margin-top: 2%;
+    margin-left: 20%;
+    border:20px;
+    border-radius: 20px;
+}
+img{
+    position:absolute;
+    width:55%;
+    height:100%;
+    border-radius:20px 0px 0px 20px;
+}
+#name_1{
+    background-color:rgba(95, 113, 87, 0.6);
+    font-size:10px;
+    position:absolute;
+    margin-left:83%;
+    margin-top:1%;
+    padding: 10px;
+    border-radius: 10px;
+}
+#name_2{
+    position:absolute;
+    background-color:rgba(95, 113, 87, 0.6);
+    margin-left:92%;
+    margin-top:1%;
+    font-size:10px;
+    padding:10px;
+    border-radius:10px;
+}
+#sign_up{
+    position: absolute;
+    /* background-color: rgba(51, 48, 63, 0.6); */
+    width:30%;
+    height:80%;
+    margin-left:51%;
+    margin-top:9%;
+    display:none;
+}
+button{
+    padding:5px;
+    margin-left:20%;
+    margin-top:-10px;
+    background-color: rgba(95, 113, 87, 0);
+    border:none;
+    font-size: 20px;
+    color:white;
+}
+button:hover{
+    padding:5px;
+    color: darkgoldenrod;
+}
+#fom1{
+    margin-top:30px;
+}
+input{
+    border-radius: 20px;
+    outline:none;
+    border:none;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5)
+}
+input[type=text]{
+    padding:10px;
+    margin:5px 5px;
+    width:70%;
+}
+input[type=password]{
+    padding:10px 10px 10px 10px;
+    margin:5px 5px 5px 5px;
+    width:70%;
+}
+input[type=email]{
+    padding:10px 10px 10px 10px;
+    margin:5px 5px 5px 5px;
+    width:70%;
+}
+input[type=submit]{
+    background-color: rgba(95, 113, 87, 0.5);
+    padding: 10px 30px 10px 30px;
+    border:none;
+    border-radius: 20px;
+    box-shadow: none;
+    color: white;
+}
+input[type=reset]
+{
+    background-color:rgba(95, 113, 87, 0.5);
+    padding: 10px 30px 10px 30px;
+    border:none;
+    border-radius: 20px;
+    box-shadow: none;
+    color: white;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+    color:rgba(95, 113, 87, 10)
+}
+#sign_in{ 
+    position: absolute;
+    /* background-color: rgba(95, 113, 87, 0.3); */
+    width:30%;
+    height:80%;
+    margin-left: 51%;
+    margin-top:12%;
+    border-radius: 50px;
+    display: block;
+}
+input[type=checkbox]{
+    margin-left: -160px;
+    box-shadow: none;
+}
+#icon1{
+    padding: 10px 10px;
+    width:280px;
+    background-color: rgba(95, 113, 87, 0.5);
+    border-radius: 20px;
+}
+i{
+    margin-left: -168px;
+    color:white;
+}
+#cwg{
+    margin-top:-20px;
+    margin-left:75px;
+    position:absolute;
+    font-size: 17px;
+}
+#goog{
+    margin-top:-20px;
+    position: absolute;
+    margin-left: 75px;
+    color:white
+}
+.animate {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s;
+  }
+  
+ @-webkit-keyframes animatezoom {
+  /* 100% {transform: rotate(360deg)}; */
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+  
+@keyframes animatezoom {
+  /* 100% {transform: rotate(360deg)}; */
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
